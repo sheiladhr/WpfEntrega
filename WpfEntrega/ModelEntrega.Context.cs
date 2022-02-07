@@ -13,10 +13,10 @@ namespace WpfEntrega
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class entregasEntities : DbContext
+    public partial class entregasEntities1 : DbContext
     {
-        public entregasEntities()
-            : base("name=entregasEntities")
+        public entregasEntities1()
+            : base("name=entregasEntities1")
         {
         }
     

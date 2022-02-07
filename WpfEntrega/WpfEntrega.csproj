@@ -65,18 +65,18 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="clientes.cs">
-      <DependentUpon>ModelEntrada.tt</DependentUpon>
+      <DependentUpon>ModelEntrega.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelEntrada.cs">
+    <Compile Include="ModelEntrega.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelEntrada.tt</DependentUpon>
+      <DependentUpon>ModelEntrega.tt</DependentUpon>
     </Compile>
     <Compile Include="pedidos.cs">
-      <DependentUpon>ModelEntrada.tt</DependentUpon>
+      <DependentUpon>ModelEntrega.tt</DependentUpon>
     </Compile>
     <Compile Include="provincias.cs">
-      <DependentUpon>ModelEntrada.tt</DependentUpon>
+      <DependentUpon>ModelEntrega.tt</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -92,15 +92,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModelEntrada.Context.cs">
+    <Compile Include="ModelEntrega.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelEntrada.Context.tt</DependentUpon>
+      <DependentUpon>ModelEntrega.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelEntrada.Designer.cs">
+    <Compile Include="ModelEntrega.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelEntrada.edmx</DependentUpon>
+      <DependentUpon>ModelEntrega.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -119,12 +119,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="ModelEntrada.edmx">
+    <EntityDeploy Include="ModelEntrega.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelEntrada.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelEntrega.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ModelEntrada.edmx.diagram">
-      <DependentUpon>ModelEntrada.edmx</DependentUpon>
+    <None Include="ModelEntrega.edmx.diagram">
+      <DependentUpon>ModelEntrega.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -136,19 +136,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ModelEntrada.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModelEntrada.Context.cs</LastGenOutput>
-      <DependentUpon>ModelEntrada.edmx</DependentUpon>
-    </Content>
-    <Content Include="ModelEntrada.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelEntrada.edmx</DependentUpon>
-      <LastGenOutput>ModelEntrada.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="ModelEntrega.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelEntrega.edmx</DependentUpon>
+      <LastGenOutput>ModelEntrega.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelEntrega.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelEntrega.edmx</DependentUpon>
+      <LastGenOutput>ModelEntrega.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,8 +6,5 @@
         xmlns:local="clr-namespace:WpfEntrega"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="278,146,0,0" TextWrapping="Wrap" Text="hola" VerticalAlignment="Top" Width="120"/>
-
-    </Grid>
+    <Grid/>
 </Window>
