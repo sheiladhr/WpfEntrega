@@ -1,0 +1,16 @@
+﻿<Window x:Class="EntregasWPF_JOSEPART.GestionPedidos.SeleccionClientesPedido"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EntregasWPF_JOSEPART.GestionPedidos"
+        mc:Ignorable="d"
+        Title="SeleccionClientesPedido" Height="102.258" Width="530.219">
+    <Grid>
+        <Grid>
+            <ComboBox x:Name="cbClientes" HorizontalAlignment="Left" Margin="184,10,0,0" VerticalAlignment="Top" Width="320" SelectionChanged="cbClientes_SelectionChanged" Height="22" FontSize="14"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Seleccione al cliente" VerticalAlignment="Top" FontSize="16"/>
+
+        </Grid>
+    </Grid>
+</Window>

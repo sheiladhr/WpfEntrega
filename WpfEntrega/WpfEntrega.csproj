@@ -68,40 +68,17 @@
     <Compile Include="clientes.cs">
       <DependentUpon>ModelEntrega.tt</DependentUpon>
     </Compile>
-    <Compile Include="GestionClientes\ModificarCliente.xaml.cs">
-      <DependentUpon>ModificarCliente.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="GestionClientes\NuevoCliente.xaml.cs">
-      <DependentUpon>NuevoCliente.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="GestionClientes\PrincClientes.xaml.cs">
-      <DependentUpon>PrincClientes.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ModelEntrega.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelEntrega.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ClienteCollection.cs" />
     <Compile Include="pedidos.cs">
       <DependentUpon>ModelEntrega.tt</DependentUpon>
     </Compile>
     <Compile Include="provincias.cs">
       <DependentUpon>ModelEntrega.tt</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\CollectionViewModel.cs" />
-    <Page Include="GestionClientes\ModificarCliente.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="GestionClientes\NuevoCliente.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="GestionClientes\PrincClientes.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

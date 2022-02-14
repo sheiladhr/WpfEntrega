@@ -24,6 +24,15 @@ namespace WpfEntrega
         public MainWindow()
         {
             InitializeComponent();
+
+        
+
+            
+        }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
 
         private void btnGestClientes_Click(object sender, RoutedEventArgs e)
