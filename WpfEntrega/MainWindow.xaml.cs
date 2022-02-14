@@ -24,15 +24,7 @@ namespace WpfEntrega
         {
             InitializeComponent();
 
-            using(entregasEntities bd = new entregasEntities())
-            {
-
-                var qSocios = from alq in bd.clientes
-                              select alq;
-
-                lista.DataContext = qSocios.ToList();
-                              
-            }
+        
 
             
         }
