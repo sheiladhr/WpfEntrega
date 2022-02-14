@@ -1,0 +1,163 @@
+﻿<UserControl x:Class="WpfEntrega.GestionClientes.PrincClientes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfEntrega.GestionClientes"
+             xmlns:vm="clr-namespace:WpfEntrega.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.CommandBindings>     
+
+         <CommandBinding Command="local:Comandos.Modificar"
+                        Executed="EjecutarModificar"
+                        CanExecute="CompruebaModificar"/>
+        <CommandBinding Command="local:Comandos.Aniadir"
+                        Executed="EjecutarAñadir"
+                        CanExecute="CompruebaAñadir"/>
+        <CommandBinding Command="local:Comandos.Borrar"
+                        Executed="ejecutarBorrar"
+                        CanExecute="compruebaBorrar"/>
+        <CommandBinding Command="local:Comandos.Guardar"
+                        Executed="EjecutarGuardar"
+                        CanExecute="CompruebaGuardar"/>
+        <!-- 
+            <CommandBinding Command="local:Comandos.Borrar"
+                        Executed="ejecutarBorrar"
+                        CanExecute="compruebaBorrar"/>
+            <CommandBinding Command="local:Comandos.Guardar"
+                        Executed="EjecutarGuardar"
+                        CanExecute="CompruebaGuardar"/>-->
+
+    </UserControl.CommandBindings>
+    <UserControl.Resources>
+        <vm:CollectionViewModel x:Key="ColeccionVM"/>
+        <!--  <vm:CollectionViewModel x:Key="ColeccionVM"/>
+        <ObjectDataProvider ObjectType="{x:Type vm:CollectionViewModel}" x:Key="ColeccionVM">
+            <ObjectDataProvider.ConstructorParameters>
+                <sys:int32>3</sys:int32>
+            </ObjectDataProvider.ConstructorParameters>
+        </ObjectDataProvider>-->
+
+        <Style x:Key="rectBoton" TargetType="Rectangle">
+            <Setter Property="Fill" Value="#FF033649"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Width" Value="85"/>
+            <Setter Property="Height" Value="85"/>
+            <Setter Property="Margin" Value="49,119,0,0"/>
+            <Setter Property="RadiusY" Value="24"/>
+            <Setter Property="RadiusX" Value="24"/>
+        </Style>
+        <Style x:Key="txtBoton" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Margin" Value="10,0,6,0"/>
+            <Setter Property="Foreground" Value="Gray"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Margin" Value="15,0,0,0"/>
+        </Style>
+        <Style x:Key="boton" TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Width" Value="95"/>
+            <Setter Property="Height" Value="95"/>
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+
+        </Style>
+        <Style x:Key="txtPrincipal" TargetType="TextBlock">
+            <Setter Property="TextTrimming" Value="WordEllipsis"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="MaxHeight" Value="50"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="FontFamily" Value="Century"/>
+        </Style>
+        <Style x:Key="txtSecundario" TargetType="TextBlock">
+            <Setter Property="TextTrimming" Value="WordEllipsis"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="MaxHeight" Value="50"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontFamily" Value="Century"/>
+        </Style>
+        <Style x:Key="Stack_H" TargetType="StackPanel">
+            <Setter Property="Orientation" Value="Horizontal"/>
+        </Style>
+        <Style x:Key="Stack_V" TargetType="StackPanel">
+            <Setter Property="Width" Value="550"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style x:Key="Brd" TargetType="Border">
+            <Setter Property="BorderBrush" Value="DarkGray"/>
+            <Setter Property="BorderThickness" Value="3"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListView x:Name="listView" ItemsSource="{Binding Source={StaticResource ColeccionVM},Path=ListaClientes}" Grid.Column="0" SelectionMode="Single">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border Style="{StaticResource Brd}">
+                        <StackPanel Style="{StaticResource Stack_H}">
+                            <StackPanel Style="{StaticResource Stack_V}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding nombre}"  Style="{StaticResource txtPrincipal}"/>
+                                    <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource txtPrincipal}" Text="{Binding apellidos}"/>
+                                    <TextBlock  Grid.Row="1" Grid.Column="0" Style="{StaticResource txtSecundario}" Text="{Binding localidad}"/>
+                                    <TextBlock  Grid.Row="1" Grid.Column="1" Style="{StaticResource txtSecundario}" Text="{Binding provincias.nombre_provincia}"/>
+                                </Grid>
+
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Rectangle Grid.Column="1" Style="{StaticResource rectBoton}" Margin="59,104,0,0" />
+        <Button x:Name="btnEditar" Command="local:Comandos.Modificar" Style="{StaticResource boton}" Grid.Column="1" Margin="55,98,50,0">
+            <StackPanel Width="85">
+                <Image Height ="60" Width ="60" Source ="/Imagenes/editar.png" />
+                <TextBlock  Text = "Editar" Style="{StaticResource txtBoton}" />
+            </StackPanel>
+        </Button>
+        <Rectangle Grid.Column="1" Style="{StaticResource rectBoton}" Margin="60,10,0,0"/>
+        <Button x:Name="btnNuevo" Command="local:Comandos.Aniadir" Style="{StaticResource boton}" Grid.Column="1" Margin="55,3,50,0" >
+            <StackPanel Width="85" >
+                <Image Height ="60" Width ="60" Source ="/Imagenes/editar.png" />
+                <TextBlock Text = "Nuevo"  Style="{StaticResource txtBoton}" />
+            </StackPanel>
+        </Button>
+        <Rectangle Grid.Column="1" Style="{StaticResource rectBoton}"  Margin="60,197,0,0"/>
+        <Button x:Name="btnEliminar"  Command="local:Comandos.Borrar" Style="{StaticResource boton}" Grid.Column="1" Margin="57,191,48,0">
+            <StackPanel Width="85" >
+                <Image Height ="60" Width ="60" Source ="/Imagenes/editar.png" />
+                <TextBlock Text = "Borrar"  Style="{StaticResource txtBoton}" />
+            </StackPanel>
+        </Button>
+        <Rectangle Grid.Column="1" Style="{StaticResource rectBoton}" Margin="60,291,0,0"/>
+        <Button x:Name="btnGuardar" Command="local:Comandos.Guardar" Style="{StaticResource boton}" Grid.Column="1" Margin="56,287,49,0">
+            <StackPanel Width="85" >
+                <Image Height ="50" Width ="50" Source ="/Imagenes/floppy-disk.png" Margin="12,0,13,0" />
+                <TextBlock Text = "Guardar"  Style="{StaticResource txtBoton}" Margin="10,0,0,0" />
+            </StackPanel>
+        </Button>
+        <!--Command="local:Comandos.Modificar"Command="local:Comandos.Borrar"Command="local:Comandos.Guardar"-->
+    </Grid>
+</UserControl>

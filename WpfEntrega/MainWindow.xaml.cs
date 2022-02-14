@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfEntrega.GestionClientes;
 
 namespace WpfEntrega
 {
@@ -23,6 +24,27 @@ namespace WpfEntrega
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnGestClientes_Click(object sender, RoutedEventArgs e)
+        {
+            MostrarVentana(new PrincClientes());
+        }
+
+        private void MostrarVentana(PrincClientes princClientes)
+        {
+            this.grdPrincipal.Children.Clear();
+            this.grdPrincipal.Children.Add(princClientes);
+        }
+
+        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnGestPedidos_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

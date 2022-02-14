@@ -46,6 +46,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -67,17 +68,40 @@
     <Compile Include="clientes.cs">
       <DependentUpon>ModelEntrega.tt</DependentUpon>
     </Compile>
+    <Compile Include="GestionClientes\ModificarCliente.xaml.cs">
+      <DependentUpon>ModificarCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GestionClientes\NuevoCliente.xaml.cs">
+      <DependentUpon>NuevoCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GestionClientes\PrincClientes.xaml.cs">
+      <DependentUpon>PrincClientes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ModelEntrega.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelEntrega.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ClienteCollection.cs" />
     <Compile Include="pedidos.cs">
       <DependentUpon>ModelEntrega.tt</DependentUpon>
     </Compile>
     <Compile Include="provincias.cs">
       <DependentUpon>ModelEntrega.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\CollectionViewModel.cs" />
+    <Page Include="GestionClientes\ModificarCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GestionClientes\NuevoCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GestionClientes\PrincClientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -139,6 +163,12 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Imagenes\agregar.png" />
+    <Resource Include="Imagenes\borrar.png" />
+    <Resource Include="Imagenes\editar.png" />
+    <Resource Include="Imagenes\error.png" />
+    <Resource Include="Imagenes\floppy-disk.png" />
+    <Resource Include="Imagenes\cancelar.png" />
     <Content Include="ModelEntrega.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelEntrega.edmx</DependentUpon>
@@ -150,5 +180,6 @@
       <LastGenOutput>ModelEntrega.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

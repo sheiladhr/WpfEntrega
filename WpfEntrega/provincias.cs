@@ -25,5 +25,10 @@ namespace WpfEntrega
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<clientes> clientes { get; set; }
+
+        public static explicit operator provincias(int v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

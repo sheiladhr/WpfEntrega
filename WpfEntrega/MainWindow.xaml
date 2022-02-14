@@ -6,5 +6,18 @@
         xmlns:local="clr-namespace:WpfEntrega"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid/>
+    <Grid>
+        <Menu x:Name="menu" Height="30" Padding="5" VerticalAlignment="Top" FontFamily="Century">
+            <MenuItem x:Name="btnGestClientes" Header="_Gestión Clientes" Click="btnGestClientes_Click"/>
+            <MenuItem x:Name="btnGestPedidos" Header="_Gestión Pedidos" Click="btnGestPedidos_Click"/>
+            <MenuItem x:Name="btnSalir" Height="26" Width="30" HorizontalAlignment="Center" Click="btnSalir_Click">
+                <MenuItem.Icon>
+                    <Image Source="Imagenes/cancelar.png" Stretch="Fill"/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </Menu>
+        <Grid x:Name="grdPrincipal" Margin="0,30,0,5">
+
+        </Grid>
+    </Grid>
 </Window>
