@@ -1,4 +1,4 @@
-﻿using WpfEntrega.viewModel;
+﻿using EntregasWPF_JOSEPART.viewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfEntrega
+namespace EntregasWPF_JOSEPART
 {
     /// <summary>
     /// Lógica de interacción para GestionarPedido.xaml

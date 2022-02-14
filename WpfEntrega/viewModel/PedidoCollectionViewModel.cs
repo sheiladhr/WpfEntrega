@@ -1,4 +1,4 @@
-﻿using WpfEntrega.Model;
+﻿using EntregasWPF_JOSEPART.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Data;
 
-namespace WpfEntrega.viewModel
+namespace EntregasWPF_JOSEPART.viewModel
 {
     public class PedidoCollectionViewModel : ObjectDataProvider,INotifyPropertyChanged
     {

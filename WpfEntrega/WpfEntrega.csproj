@@ -68,17 +68,40 @@
     <Compile Include="clientes.cs">
       <DependentUpon>ModelEntrega.tt</DependentUpon>
     </Compile>
+    <Compile Include="GestionPedidos\GestionarPedido.xaml.cs">
+      <DependentUpon>GestionarPedido.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPedidos\NuevoPedido.xaml.cs">
+      <DependentUpon>NuevoPedido.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPedidos\SeleccionClientesPedido.xaml.cs">
+      <DependentUpon>SeleccionClientesPedido.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ModelEntrega.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelEntrega.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\PedidoCollection.cs" />
     <Compile Include="pedidos.cs">
       <DependentUpon>ModelEntrega.tt</DependentUpon>
     </Compile>
     <Compile Include="provincias.cs">
       <DependentUpon>ModelEntrega.tt</DependentUpon>
     </Compile>
+    <Compile Include="viewModel\PedidoCollectionViewModel.cs" />
+    <Page Include="GestionPedidos\GestionarPedido.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GestionPedidos\NuevoPedido.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GestionPedidos\SeleccionClientesPedido.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

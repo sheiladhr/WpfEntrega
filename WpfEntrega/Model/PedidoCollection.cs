@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WpfEntrega.Model
+namespace EntregasWPF_JOSEPART.Model
 {
     public class PedidoCollection : ObservableCollection<pedidos>
     {

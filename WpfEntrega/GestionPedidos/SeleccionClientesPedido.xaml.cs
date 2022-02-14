@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfEntrega.GestionPedidos
+namespace EntregasWPF_JOSEPART.GestionPedidos
 {
     /// <summary>
     /// Lógica de interacción para SeleccionClientesPedido.xaml

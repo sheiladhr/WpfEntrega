@@ -1,4 +1,4 @@
-﻿using WpfEntrega.viewModel;
+﻿using EntregasWPF_JOSEPART.viewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,13 +8,12 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfEntrega
+namespace EntregasWPF_JOSEPART
 {
     /// <summary>
     /// Lógica de interacción para NuevoPedido.xaml
@@ -62,7 +61,7 @@ namespace WpfEntrega
                     actualizarProperties(copiaPedido, ped);
 
 
-                    System.Windows.MessageBox.Show("Pedido Modificado", "Exito");
+                    MessageBox.Show("Pedido Modificado", "Exito");
                     this.Close();
                     break;
 
@@ -100,7 +99,7 @@ namespace WpfEntrega
                     firma = null
                 });
 
-                System.Windows.MessageBox.Show("Pedido realizado correctamente", "Exito");
+                MessageBox.Show("Pedido realizado correctamente", "Exito");
                 this.Close();
 
             }
