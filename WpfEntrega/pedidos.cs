@@ -14,13 +14,89 @@ namespace WpfEntrega
     
     public partial class pedidos
     {
-        public int id_pedido { get; set; }
-        public string cliente { get; set; }
-        public System.DateTime fecha_pedido { get; set; }
-        public string descripcion { get; set; }
-        public Nullable<System.DateTime> fecha_entrega { get; set; }
-        public byte[] firma { get; set; }
-    
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void raisePropertyChanged([CallerMemberName] string name = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
+
+
+
+
+        public int id_pedido_;
+
+        public int id_pedido
+        {
+            get { return id_pedido_; }
+            set { id_pedido_ = value; raisePropertyChanged(); }
+        }
+
+
+        public string cliente_;
+
+        public string cliente
+        {
+            get { return cliente_; }
+            set { cliente_ = value; raisePropertyChanged(); }
+        }
+
+
+        public System.DateTime fecha_pedido_;
+
+        public System.DateTime fecha_pedido
+        {
+            get { return fecha_pedido_; }
+            set { fecha_pedido_ = value; raisePropertyChanged(); }
+        }
+
+
+        public string descripcion_;
+
+        public string descripcion
+        {
+            get { return descripcion_; }
+            set { descripcion_ = value; raisePropertyChanged(); }
+        }
+
+        public Nullable<System.DateTime> fecha_entrega_;
+
+        public Nullable<System.DateTime> fecha_entrega
+        {
+            get { return fecha_entrega_; }
+            set { fecha_entrega_ = value; raisePropertyChanged(); }
+        }
+
+        public byte[] firma_;
+
+        public pedidos(int id_pedido, string cliente, DateTime fecha_pedido, string descripcion, DateTime? fecha_entrega, byte[] firma)
+        {
+            this.id_pedido = id_pedido;
+            this.cliente = cliente;
+            this.descripcion = descripcion;
+            this.fecha_pedido = fecha_pedido;
+            this.fecha_entrega = fecha_entrega;
+            this.firma = firma;
+        }
+
+        public pedidos()
+        {
+        }
+
+        public byte[] firma
+        {
+            get { return firma_; }
+            set { firma_ = value; raisePropertyChanged(); }
+        }
+
+
         public virtual clientes clientes { get; set; }
+
+
     }
 }
